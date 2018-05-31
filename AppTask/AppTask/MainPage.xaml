@@ -3,8 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppTask"
              x:Class="AppTask.MainPage">
-
-
     <RelativeLayout>
         <Label
             x:Name="LabelSummary"
@@ -17,7 +15,6 @@
             "{ConstraintExpression Type=RelativeToParent,
                 Property=Y, Constant=80,
                 Factor=1}" />
-        
         <Label
             x:Name="LabelTaskToDo"
             Text="Task To Do" 
@@ -28,7 +25,6 @@
             RelativeLayout.YConstraint=
             "{ConstraintExpression Type=RelativeToView, ElementName=LabelSummary,
                 Property=Y, Factor=1, Constant=100}" />
-
         <Label
             x:Name="LabelTaskDoing"
             Text="Task Doing"
@@ -39,7 +35,6 @@
             RelativeLayout.YConstraint=
             "{ConstraintExpression Type=RelativeToView, ElementName=LabelTaskToDo,
                 Property=Y, Factor=1, Constant=80}" />
-
         <Label
             x:Name="LabelTaskDone"
             Text="Task Done"
@@ -50,7 +45,6 @@
             RelativeLayout.YConstraint=
             "{ConstraintExpression Type=RelativeToView, ElementName=LabelTaskDoing,
                 Property=Y, Factor=1, Constant=80}" />
-        
         <Button
             Text="New"
             RelativeLayout.XConstraint=
@@ -59,7 +53,6 @@
             RelativeLayout.YConstraint=
             "{ConstraintExpression Type=RelativeToParent,
                 Property=Y, Factor=1, Constant=500}" />
-        
         <Button
             Text="Show All"
             RelativeLayout.XConstraint=
@@ -68,7 +61,5 @@
             RelativeLayout.YConstraint=
             "{ConstraintExpression Type=RelativeToParent,
                 Property=Y, Factor=1, Constant=500}" />
-
     </RelativeLayout>
-
 </ContentPage>
