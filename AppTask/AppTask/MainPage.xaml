@@ -4,11 +4,71 @@
              xmlns:local="clr-namespace:AppTask"
              x:Class="AppTask.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+
+    <RelativeLayout>
+        <Label
+            x:Name="LabelSummary"
+            Text="Summary"
+            Font="30"
+            RelativeLayout.XConstraint=
+            "{ConstraintExpression Type=RelativeToParent,
+                Property=X, Factor=1, Constant=120}"
+            RelativeLayout.YConstraint=
+            "{ConstraintExpression Type=RelativeToParent,
+                Property=Y, Constant=80,
+                Factor=1}" />
+        
+        <Label
+            x:Name="LabelTaskToDo"
+            Text="Task To Do" 
+            Font="30" 
+            RelativeLayout.XConstraint=
+            "{ConstraintExpression Type=RelativeToView, ElementName=LabelSummary,
+                Property=X, Factor=1, Constant=-10}"
+            RelativeLayout.YConstraint=
+            "{ConstraintExpression Type=RelativeToView, ElementName=LabelSummary,
+                Property=Y, Factor=1, Constant=100}" />
+
+        <Label
+            x:Name="LabelTaskDoing"
+            Text="Task Doing"
+            Font="30"
+            RelativeLayout.XConstraint=
+            "{ConstraintExpression Type=RelativeToView, ElementName=LabelTaskToDo,
+                Property=X, Factor=1, Constant=0}"
+            RelativeLayout.YConstraint=
+            "{ConstraintExpression Type=RelativeToView, ElementName=LabelTaskToDo,
+                Property=Y, Factor=1, Constant=80}" />
+
+        <Label
+            x:Name="LabelTaskDone"
+            Text="Task Done"
+            Font="30"
+            RelativeLayout.XConstraint=
+            "{ConstraintExpression Type=RelativeToView, ElementName=LabelTaskDoing,
+                Property=X, Factor=1, Constant=0}"
+            RelativeLayout.YConstraint=
+            "{ConstraintExpression Type=RelativeToView, ElementName=LabelTaskDoing,
+                Property=Y, Factor=1, Constant=80}" />
+        
+        <Button
+            Text="New"
+            RelativeLayout.XConstraint=
+            "{ConstraintExpression Type=RelativeToParent,
+                Property=X, Factor=1, Constant=50}"
+            RelativeLayout.YConstraint=
+            "{ConstraintExpression Type=RelativeToParent,
+                Property=Y, Factor=1, Constant=500}" />
+        
+        <Button
+            Text="Show All"
+            RelativeLayout.XConstraint=
+            "{ConstraintExpression Type=RelativeToParent,
+                Property=X, Factor=1, Constant=230}"
+            RelativeLayout.YConstraint=
+            "{ConstraintExpression Type=RelativeToParent,
+                Property=Y, Factor=1, Constant=500}" />
+
+    </RelativeLayout>
 
 </ContentPage>
